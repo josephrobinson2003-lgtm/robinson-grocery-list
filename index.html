@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1f6f43">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="description" content="Robinson family weekly grocery checklist">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="Grocery List">
 <title>Robinson Grocery List</title>
 <style>
@@ -50,6 +57,7 @@
   <div class="tabs" id="tabs"></div>
   <div class="bar">
     <span class="count" id="count"></span>
+    <button class="btn-light" id="installBtn" hidden>Install</button>
     <button class="btn-light" id="hideBtn">Hide ✓</button>
     <button class="btn-light" id="uncheckBtn">Uncheck all</button>
     <button class="btn-light" id="resetBtn">Reset</button>
@@ -132,6 +140,15 @@
   document.getElementById('uncheckBtn').onclick = function(){ if(confirm('Uncheck every item?')){ state = {}; save(); render(); } };
   document.getElementById('resetBtn').onclick = function(){ if(confirm('Reset the list (uncheck all, show all items, back to All tab)?')){ state={}; ui={tab:'all'}; save(); render(); window.scrollTo(0,0); } };
   render();
+
+  // Install button (Android Chrome) + service worker for offline use
+  var deferred = null, ib = document.getElementById('installBtn');
+  window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); deferred = e; ib.hidden = false; });
+  ib.onclick = function(){ if(!deferred) return; deferred.prompt(); deferred.userChoice.finally(function(){ deferred = null; ib.hidden = true; }); };
+  window.addEventListener('appinstalled', function(){ ib.hidden = true; });
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js', { scope: './' }).catch(function(){}); });
+  }
 })();
 </script>
 </body>

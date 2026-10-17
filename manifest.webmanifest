@@ -1,0 +1,20 @@
+{
+  "id": "/robinson-grocery-list/",
+  "name": "Robinson Grocery List",
+  "short_name": "Groceries",
+  "description": "Robinson family weekly grocery checklist from the Family calendar menu.",
+  "start_url": "/robinson-grocery-list/",
+  "scope": "/robinson-grocery-list/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "theme_color": "#1f6f43",
+  "background_color": "#f4f6f3",
+  "categories": ["food", "lifestyle", "shopping"],
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+    {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

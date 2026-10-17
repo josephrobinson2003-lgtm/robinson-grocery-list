@@ -10,6 +10,19 @@ Repo: https://github.com/josephrobinson2003-lgtm/robinson-grocery-list (GitHub P
 - `build.py`    – injects `list.json` into `template.html` -> `index.html` (self-contained) and writes `list.txt` (plain-text list to paste in chat)
 - `index.html`  – generated, what GitHub Pages serves. Don't hand-edit; run `build.py`.
 - `.nojekyll`   – tells Pages to serve files as-is.
+- `manifest.webmanifest` – PWA manifest (name, short_name "Groceries", start_url/scope `/robinson-grocery-list/`,
+  standalone, theme #1f6f43, icons). Static; leave as-is.
+- `sw.js`       – service worker. Caches the app shell for offline use; **network-first** for the page
+  (`/`, `index.html`, where the data is embedded) and `list.json`, cache-first for icons/manifest.
+  `build.py` re-stamps its `const VERSION = '...'` line every build so installed phones drop the old cache.
+- `icons/`      – app icons (192/512 "any", 192/512 "maskable", 180 apple-touch-icon, 32 favicon).
+  Regenerate only if the design changes: `python3 make_icons.py`.
+- `build.py` also asserts the manifest/icons/sw.js exist and that index.html still has the manifest link,
+  apple-touch-icon, theme-color meta and service-worker registration — if it fails, fix `template.html`.
+
+## Installing on a phone
+Android Chrome: open the live link → menu ⋮ → **Install app** (or the in-page "Install" button when shown).
+It opens full-screen with its own icon and works offline. iPhone Safari: Share → Add to Home Screen.
 
 ## Weekly refresh
 1. Read the Family calendar (`family17195563696193731746@group.calendar.google.com`, user-Google-calendar
