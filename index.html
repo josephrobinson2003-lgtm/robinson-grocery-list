@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f6f43">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Grocery List">
+<title>Robinson Grocery List</title>
+<style>
+  :root { --green:#1f6f43; --bg:#f4f6f3; --card:#fff; --muted:#6b7280; --line:#e5e7eb; --est:#b45309; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:#111; font-size:17px; }
+  header { position:sticky; top:0; z-index:5; background:var(--green); color:#fff; padding:14px 16px 10px; padding-top:calc(14px + env(safe-area-inset-top)); box-shadow:0 2px 6px rgba(0,0,0,.15); }
+  h1 { margin:0; font-size:22px; }
+  .range { font-size:14px; opacity:.9; margin-top:2px; }
+  .bar { display:flex; gap:6px; align-items:center; margin-top:8px; }
+  .bar button { padding:8px 10px; font-size:14px; min-height:40px; white-space:nowrap; }
+  .count { font-weight:700; font-size:14px; margin-right:auto; white-space:nowrap; }
+  button { font:inherit; font-size:15px; border:0; border-radius:10px; padding:10px 14px; min-height:44px; cursor:pointer; }
+  .btn-light { background:rgba(255,255,255,.18); color:#fff; }
+  .btn-light.on { background:#fff; color:var(--green); font-weight:700; }
+  .tabs { display:flex; gap:6px; margin-top:10px; }
+  .tabs button { flex:1; background:rgba(255,255,255,.18); color:#fff; padding:10px 6px; }
+  .tabs button.on { background:#fff; color:var(--green); font-weight:700; }
+  main { padding:12px 12px 90px; max-width:720px; margin:0 auto; }
+  .legend { font-size:13px; color:var(--muted); margin:4px 4px 10px; }
+  .sec h2 { font-size:19px; margin:18px 4px 4px; color:var(--green); }
+  .sub { font-size:13px; color:var(--muted); margin:0 4px 8px; }
+  .grp { background:var(--card); border-radius:14px; margin:10px 0; overflow:hidden; box-shadow:0 1px 2px rgba(0,0,0,.06); }
+  .grp h3 { margin:0; padding:10px 14px; font-size:14px; text-transform:uppercase; letter-spacing:.04em; background:#eef4ef; color:#24543a; display:flex; justify-content:space-between; }
+  .item { display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border-top:1px solid var(--line); min-height:56px; cursor:pointer; user-select:none; }
+  .box { flex:0 0 26px; height:26px; border:2px solid #9ca3af; border-radius:7px; margin-top:1px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:18px; }
+  .item.done .box { background:var(--green); border-color:var(--green); }
+  .txt { flex:1; min-width:0; }
+  .name { font-weight:600; line-height:1.25; }
+  .qty { color:#374151; font-size:15px; }
+  .meal { color:var(--muted); font-size:13px; margin-top:2px; }
+  .est { color:var(--est); font-size:12px; font-weight:700; margin-left:4px; white-space:nowrap; }
+  .item.done .name, .item.done .qty { text-decoration:line-through; color:#9ca3af; }
+  .item.done .meal { opacity:.6; }
+  .hide-done .item.done { display:none; }
+  footer { text-align:center; color:var(--muted); font-size:12px; padding:20px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Robinson Grocery List</h1>
+  <div class="range" id="range"></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="bar">
+    <span class="count" id="count"></span>
+    <button class="btn-light" id="hideBtn">Hide ✓</button>
+    <button class="btn-light" id="uncheckBtn">Uncheck all</button>
+    <button class="btn-light" id="resetBtn">Reset</button>
+  </div>
+</header>
+<main id="main"></main>
+<footer id="foot"></footer>
+
+<!-- GROCERY-DATA-START -->
+<script id="grocery-data" type="application/json">{"title": "Robinson Grocery List", "weekId": "2026-10-17", "range": "Sat Oct 17 – Sun Oct 25, 2026", "updated": "2026-10-17", "legend": "B = breakfast, L = lunch, D = dinner. ★ = estimated (meal was listed by name only, no recipe).", "sections": [{"id": "wknd", "name": "This weekend (Oct 17–18)", "subtitle": "Sat: French toast · Chicken salad sandwiches · Loaded potato soup — Sun: Breakfast burritos · Turkey & Swiss wraps · Meatloaf, mashed potatoes & green beans", "groups": [{"name": "Meat", "items": [{"n": "Ground beef (80/20 or 85/15)", "q": "2 lb", "m": "Sun D meatloaf"}, {"n": "Bacon", "q": "1 pkg (6 slices, optional)", "m": "Sat D soup"}, {"n": "Rotisserie chicken (or 1½ lb cooked chicken)", "q": "1", "m": "Sat L chicken salad", "e": true}, {"n": "Deli turkey, sliced", "q": "1 lb", "m": "Sun L wraps", "e": true}]}, {"name": "Produce", "items": [{"n": "Potatoes (Yukon Gold or russet)", "q": "4½ lb (5-lb bag)", "m": "Sat D soup 2 lb, Sun D mashed 2½ lb"}, {"n": "Yellow onions", "q": "2 (1 large, 1 small)", "m": "Sat D, Sun D"}, {"n": "Garlic", "q": "1 head (3 cloves)", "m": "Sat D"}, {"n": "Green onions", "q": "1 bunch", "m": "Sat D"}, {"n": "Fresh green beans", "q": "1 lb", "m": "Sun D"}, {"n": "Fresh berries (strawberries/blueberries)", "q": "2 pints", "m": "Sat B French toast", "e": true}, {"n": "Apples", "q": "3–4", "m": "Sat L", "e": true}, {"n": "Celery", "q": "1 bunch (2 stalks)", "m": "Sat L chicken salad", "e": true}, {"n": "Lettuce (romaine or leaf)", "q": "1 head", "m": "Sat L, Sun L", "e": true}, {"n": "Tomato", "q": "1–2", "m": "Sun L wraps", "e": true}, {"n": "Grapes or other fresh fruit", "q": "2 lb", "m": "Sun L", "e": true}]}, {"name": "Dairy & Eggs", "items": [{"n": "Eggs", "q": "16 (18-ct carton)", "m": "Sun D 2, Sat B 6★, Sun B 8★"}, {"n": "Milk", "q": "about 3 cups (½ gallon)", "m": "Sat D 1 c, Sun D 1 c, Sat B 1 c★"}, {"n": "Shredded cheddar", "q": "3 cups (two 8-oz bags)", "m": "Sat D 2 c, Sun B 1 c★"}, {"n": "Sour cream", "q": "8 oz tub", "m": "Sat D ½ c, Sun B topping"}, {"n": "Butter", "q": "1 lb", "m": "Sun D mashed/beans, Sat B★"}, {"n": "Swiss cheese, sliced", "q": "8 slices", "m": "Sun L wraps", "e": true}]}, {"name": "Bakery/Bread", "items": [{"n": "Crusty bread", "q": "1 loaf", "m": "Sat D soup"}, {"n": "Thick bread for French toast (Texas toast/brioche)", "q": "1 loaf", "m": "Sat B", "e": true}, {"n": "Sandwich bread or croissants", "q": "1 loaf / 6 croissants", "m": "Sat L", "e": true}, {"n": "Large flour tortillas (burrito size)", "q": "16 (2 packs)", "m": "Sun B 8, Sun L 8", "e": true}]}, {"name": "Pantry/Canned/Dry", "items": [{"n": "Chicken broth", "q": "32 oz carton (4 cups)", "m": "Sat D"}, {"n": "Dry bread crumbs", "q": "¾ cup", "m": "Sun D"}, {"n": "Brown sugar", "q": "2 Tbsp", "m": "Sun D glaze"}, {"n": "Maple syrup", "q": "1 bottle", "m": "Sat B", "e": true}, {"n": "Vanilla extract", "q": "1 tsp", "m": "Sat B", "e": true}, {"n": "Potato chips", "q": "1 bag", "m": "Sat L", "e": true}]}, {"name": "Spices & Sauces", "items": [{"n": "Salt & black pepper", "q": "check pantry", "m": "Sat D, Sun D"}, {"n": "Garlic powder", "q": "½ tsp", "m": "Sun D"}, {"n": "Worcestershire sauce", "q": "1 Tbsp", "m": "Sun D"}, {"n": "Ketchup", "q": "½ cup", "m": "Sun D glaze"}, {"n": "Yellow mustard", "q": "1 Tbsp", "m": "Sun D glaze"}, {"n": "Mayonnaise", "q": "1 jar", "m": "Sat L, Sun L", "e": true}, {"n": "Ground cinnamon", "q": "1 tsp", "m": "Sat B", "e": true}, {"n": "Salsa", "q": "1 jar", "m": "Sun B", "e": true}]}, {"name": "Frozen", "items": [{"n": "Frozen shredded hash browns", "q": "1 bag", "m": "Sun B burritos", "e": true}]}]}, {"id": "next", "name": "Next week (Oct 19–25)", "subtitle": "Mon stir-fry · Tue ribeye · Wed herb chicken · Thu chili · Fri fajitas · Sat pancakes, roast beef sandwiches, pot roast · Sun eggs & toast, beef quesadillas, potato soup", "groups": [{"name": "Meat", "items": [{"n": "Flank steak (or sirloin/skirt)", "q": "2¾ lb", "m": "Mon stir-fry 1¼ lb, Fri fajitas 1½ lb"}, {"n": "Ribeye steaks (10–12 oz, 1–1¼\" thick)", "q": "4", "m": "Tue D"}, {"n": "Whole chicken 4–4½ lb (or 4 bone-in breasts)", "q": "1", "m": "Wed D"}, {"n": "Ground beef (80/20 or 85/15)", "q": "2½ lb", "m": "Thu chili 1½ lb, Sun L quesadillas 1 lb★"}, {"n": "Beef chuck roast", "q": "3–3½ lb", "m": "Sat D pot roast"}, {"n": "Deli roast beef, sliced", "q": "1 lb", "m": "Sat L sandwiches", "e": true}, {"n": "Bacon", "q": "1 pkg (6 slices, optional)", "m": "Sun D soup"}]}, {"name": "Produce", "items": [{"n": "Potatoes (Yukon Gold/russet; baby OK for Sat)", "q": "5½ lb", "m": "Wed 2 lb, Sat 1½ lb, Sun 2 lb"}, {"n": "Sweet potatoes, large", "q": "2", "m": "Tue D"}, {"n": "Yellow onions, large", "q": "4", "m": "Thu, Fri, Sat D, Sun D"}, {"n": "Red onion", "q": "1", "m": "Tue D"}, {"n": "Garlic", "q": "2 heads (~20 cloves)", "m": "Mon, Wed, Thu, Fri, Sat D, Sun D"}, {"n": "Bell peppers", "q": "4 (1 red, 1 green, 2 any color)", "m": "Mon red, Thu green, Fri 2"}, {"n": "Carrots", "q": "6 (1-lb bag)", "m": "Mon 2, Sat 4"}, {"n": "Broccoli", "q": "1 small crown (1 cup florets)", "m": "Mon"}, {"n": "Snap peas or snow peas", "q": "8 oz (1 cup)", "m": "Mon"}, {"n": "Fresh ginger", "q": "1 small knob", "m": "Mon"}, {"n": "Green onions", "q": "1 bunch", "m": "Mon, Sun D, Thu topping"}, {"n": "Brussels sprouts", "q": "1 lb", "m": "Tue D"}, {"n": "Fresh green beans", "q": "1 lb", "m": "Wed D"}, {"n": "Lemon", "q": "1", "m": "Wed D"}, {"n": "Limes", "q": "2", "m": "Fri D"}, {"n": "Fresh rosemary & thyme (or use dried)", "q": "1 pack each", "m": "Wed D"}, {"n": "Avocados", "q": "3", "m": "Thu/Fri topping, Sun B 2★"}, {"n": "Fresh berries", "q": "2 pints", "m": "Sat B pancakes", "e": true}, {"n": "Salad greens", "q": "2 bags", "m": "Sat L, Sun L", "e": true}, {"n": "Bananas or other fresh fruit", "q": "1 bunch", "m": "Sun B", "e": true}]}, {"name": "Dairy & Eggs", "items": [{"n": "Eggs", "q": "1 dozen", "m": "Sat B 2★, Sun B 8★"}, {"n": "Butter", "q": "1 lb", "m": "Wed D, Sat B★, Sun B★"}, {"n": "Milk or half-and-half", "q": "1 quart (~1½ cups needed)", "m": "Wed ½ c, Sun D 1 c"}, {"n": "Buttermilk", "q": "1 quart", "m": "Sat B pancakes", "e": true}, {"n": "Sour cream", "q": "16 oz tub", "m": "Sun D ½ c, Thu/Fri toppings, Sat L horseradish cream★"}, {"n": "Shredded cheddar", "q": "3 cups (two 8-oz bags)", "m": "Sun D 2 c, Thu/Fri toppings"}, {"n": "Shredded Mexican-blend cheese", "q": "8 oz bag", "m": "Sun L quesadillas", "e": true}]}, {"name": "Bakery/Bread", "items": [{"n": "Flour tortillas (fajita/soft taco size)", "q": "2 packs (~16)", "m": "Fri D, Sun L quesadillas★"}, {"n": "Crusty bread", "q": "1 loaf", "m": "Sun D soup"}, {"n": "Sandwich rolls", "q": "6", "m": "Sat L", "e": true}, {"n": "Sandwich bread (for toast)", "q": "1 loaf", "m": "Sun B", "e": true}]}, {"name": "Pantry/Canned/Dry", "items": [{"n": "White or brown rice", "q": "2 lb bag", "m": "Mon D"}, {"n": "Crushed tomatoes", "q": "1 can (28 oz)", "m": "Thu chili"}, {"n": "Kidney beans", "q": "1 can (15 oz)", "m": "Thu chili"}, {"n": "Black beans", "q": "1 can (15 oz)", "m": "Thu chili"}, {"n": "Tomato paste", "q": "1 small can", "m": "Thu chili"}, {"n": "Beef broth", "q": "32 oz carton (3 cups)", "m": "Thu 1 c, Sat 2 c"}, {"n": "Chicken broth", "q": "32 oz carton (4 cups)", "m": "Sun D soup"}, {"n": "Cornbread mix", "q": "1 box", "m": "Thu D"}, {"n": "Olive oil", "q": "about ¾ cup (1 bottle)", "m": "Tue, Wed, Fri, Sat D"}, {"n": "Vegetable or canola oil", "q": "2 Tbsp", "m": "Mon D"}, {"n": "Cornstarch", "q": "3 Tbsp", "m": "Mon, Sat gravy"}, {"n": "Pancake basics: flour, sugar, baking powder, baking soda (or buttermilk pancake mix)", "q": "~2 cups flour", "m": "Sat B", "e": true}, {"n": "Maple syrup", "q": "check — bought this weekend", "m": "Sat B", "e": true}]}, {"name": "Spices & Sauces", "items": [{"n": "Soy sauce", "q": "3 Tbsp", "m": "Mon D"}, {"n": "Sesame oil (optional)", "q": "1 Tbsp", "m": "Mon D"}, {"n": "Chili powder", "q": "2 Tbsp + 1 tsp", "m": "Thu, Fri"}, {"n": "Ground cumin", "q": "2 tsp", "m": "Thu, Fri"}, {"n": "Smoked paprika", "q": "about 2 tsp", "m": "Tue, Thu, Fri"}, {"n": "Dried rosemary", "q": "2 tsp", "m": "Tue, Sat D"}, {"n": "Dried thyme", "q": "1–2 tsp", "m": "Tue, Sat D"}, {"n": "Dried oregano", "q": "½ tsp", "m": "Thu"}, {"n": "Garlic powder", "q": "1 tsp (have from weekend)", "m": "Tue"}, {"n": "Worcestershire sauce", "q": "1 Tbsp (have from weekend)", "m": "Sat D"}, {"n": "Kosher salt & black pepper", "q": "check pantry", "m": "all week"}, {"n": "Salsa", "q": "1 jar", "m": "Fri D, Sun L★"}, {"n": "Prepared horseradish", "q": "1 small jar", "m": "Sat L horseradish cream", "e": true}, {"n": "Salad dressing", "q": "1 bottle", "m": "Sat L, Sun L", "e": true}]}]}]}</script>
+<!-- GROCERY-DATA-END -->
+
+<script>
+(function(){
+  var data = JSON.parse(document.getElementById('grocery-data').textContent);
+  var KEY = 'robinson-grocery:' + data.weekId;
+  var UIKEY = 'robinson-grocery-ui';
+  // drop saved state from older weeks so a new list starts fresh
+  try { Object.keys(localStorage).forEach(function(k){ if(k.indexOf('robinson-grocery:')===0 && k!==KEY) localStorage.removeItem(k); }); } catch(e){}
+  var state = {}; try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){}
+  var ui = {}; try { ui = JSON.parse(localStorage.getItem(UIKEY)) || {}; } catch(e){}
+  if (!ui.tab) ui.tab = 'all';
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); localStorage.setItem(UIKEY, JSON.stringify(ui)); } catch(e){} }
+  function slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+  function el(t,c,txt){ var e=document.createElement(t); if(c) e.className=c; if(txt!=null) e.textContent=txt; return e; }
+
+  document.getElementById('range').textContent = data.range;
+  document.getElementById('foot').textContent = 'Updated ' + data.updated + ' · from the Family calendar menu';
+
+  var tabs = document.getElementById('tabs');
+  var tabDefs = [{id:'all', name:'All'}].concat(data.sections.map(function(s){ return {id:s.id, name:s.name.replace(/\s*\(.*\)/,'')}; }));
+  tabDefs.forEach(function(t){
+    var b = el('button', null, t.name); b.dataset.tab = t.id;
+    b.onclick = function(){ ui.tab = t.id; save(); render(); };
+    tabs.appendChild(b);
+  });
+
+  var main = document.getElementById('main');
+  function render(){
+    [].forEach.call(tabs.children, function(b){ b.classList.toggle('on', b.dataset.tab===ui.tab); });
+    document.getElementById('hideBtn').classList.toggle('on', !!ui.hide);
+    main.classList.toggle('hide-done', !!ui.hide);
+    main.innerHTML = '';
+    if (data.legend) main.appendChild(el('div','legend',data.legend));
+    var total=0, left=0;
+    data.sections.forEach(function(sec){
+      var visible = ui.tab==='all' || ui.tab===sec.id;
+      var sdiv = el('section','sec');
+      sdiv.appendChild(el('h2',null,sec.name));
+      if (sec.subtitle) sdiv.appendChild(el('p','sub',sec.subtitle));
+      sec.groups.forEach(function(g){
+        if (!g.items || !g.items.length) return;
+        var gdiv = el('div','grp'); var h = el('h3'); h.appendChild(el('span',null,g.name));
+        var gleft = el('span'); h.appendChild(gleft); gdiv.appendChild(h);
+        var gl=0;
+        g.items.forEach(function(it){
+          var id = sec.id + '|' + slug(g.name) + '|' + slug(it.n);
+          var done = !!state[id];
+          if (visible){ total++; if(!done){ left++; gl++; } }
+          var row = el('div','item'+(done?' done':''));
+          var box = el('div','box', done?'✓':'');
+          var t = el('div','txt');
+          var nm = el('div','name', it.n);
+          if (it.e) nm.appendChild(el('span','est','★ est.'));
+          t.appendChild(nm);
+          if (it.q) t.appendChild(el('div','qty', it.q));
+          if (it.m) t.appendChild(el('div','meal', it.m));
+          row.appendChild(box); row.appendChild(t);
+          row.onclick = function(){ if(state[id]) delete state[id]; else state[id]=1; save(); render(); };
+          gdiv.appendChild(row);
+        });
+        gleft.textContent = gl ? gl + ' left' : 'done ✓';
+        sdiv.appendChild(gdiv);
+      });
+      if (visible) main.appendChild(sdiv);
+    });
+    document.getElementById('count').textContent = left + ' of ' + total + ' left';
+  }
+  document.getElementById('hideBtn').onclick = function(){ ui.hide = !ui.hide; save(); render(); };
+  document.getElementById('uncheckBtn').onclick = function(){ if(confirm('Uncheck every item?')){ state = {}; save(); render(); } };
+  document.getElementById('resetBtn').onclick = function(){ if(confirm('Reset the list (uncheck all, show all items, back to All tab)?')){ state={}; ui={tab:'all'}; save(); render(); window.scrollTo(0,0); } };
+  render();
+})();
+</script>
+</body>
+</html>
