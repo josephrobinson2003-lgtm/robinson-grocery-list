@@ -43,6 +43,7 @@
   .name { font-weight:600; line-height:1.25; }
   .qty { color:#374151; font-size:15px; }
   .meal { color:var(--muted); font-size:13px; margin-top:2px; }
+  .loc { color:#1f6f43; font-size:12px; margin-top:2px; }
   .est { color:var(--est); font-size:12px; font-weight:700; margin-left:4px; white-space:nowrap; }
   .item.done .name, .item.done .qty { text-decoration:line-through; color:#9ca3af; }
   .item.done .meal { opacity:.6; }
@@ -84,8 +85,8 @@
   function slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
   function el(t,c,txt){ var e=document.createElement(t); if(c) e.className=c; if(txt!=null) e.textContent=txt; return e; }
 
-  document.getElementById('range').textContent = data.range;
-  document.getElementById('foot').textContent = 'Updated ' + data.updated + ' · from the Family calendar menu';
+  document.getElementById('range').textContent = data.range + (data.store ? ' · ' + data.store.name + ', ' + data.store.address.split(',')[0] : '');
+  document.getElementById('foot').textContent = 'Updated ' + data.updated + ' · from the Family calendar menu' + (data.store ? ' · in aisle order for ' + data.store.name + ' (' + data.store.address + ')' : '');
 
   var tabs = document.getElementById('tabs');
   var tabDefs = [{id:'all', name:'All'}].concat(data.sections.map(function(s){ return {id:s.id, name:s.name.replace(/\s*\(.*\)/,'')}; }));
@@ -114,7 +115,7 @@
         var gleft = el('span'); h.appendChild(gleft); gdiv.appendChild(h);
         var gl=0;
         g.items.forEach(function(it){
-          var id = sec.id + '|' + slug(g.name) + '|' + slug(it.n);
+          var id = it.id || (sec.id + '|' + slug(g.name) + '|' + slug(it.n));
           var done = !!state[id];
           if (visible){ total++; if(!done){ left++; gl++; } }
           var row = el('div','item'+(done?' done':''));
@@ -125,6 +126,7 @@
           t.appendChild(nm);
           if (it.q) t.appendChild(el('div','qty', it.q));
           if (it.m) t.appendChild(el('div','meal', it.m));
+          if (it.loc && it.loc !== g.short) t.appendChild(el('div','loc', '📍 ' + it.loc));
           row.appendChild(box); row.appendChild(t);
           row.onclick = function(){ if(state[id]) delete state[id]; else state[id]=1; save(); render(); };
           gdiv.appendChild(row);
