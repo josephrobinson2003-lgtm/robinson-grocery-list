@@ -245,20 +245,20 @@
     {
       "id": "next",
       "name": "Next week (Oct 19–25)",
-      "subtitle": "Mon stir-fry · Tue ribeye · Wed herb chicken · Thu chili · Fri fajitas · Sat pancakes, roast beef sandwiches, pot roast · Sun eggs & toast, beef quesadillas, potato soup",
+      "subtitle": "Mon ribeye · Tue dinner TBD · Wed herb chicken · Thu chili · Fri fajitas · Sat pancakes, roast beef sandwiches, pot roast · Sun eggs & toast, beef quesadillas, potato soup",
       "groups": [
         {
           "name": "Meat",
           "items": [
             {
               "n": "Flank steak (or sirloin/skirt)",
-              "q": "2¾ lb",
-              "m": "Mon stir-fry 1¼ lb, Fri fajitas 1½ lb"
+              "q": "1½ lb",
+              "m": "Fri fajitas"
             },
             {
               "n": "Ribeye steaks (10–12 oz, 1–1¼\" thick)",
               "q": "4",
-              "m": "Tue D"
+              "m": "Mon D"
             },
             {
               "n": "Whole chicken 4–4½ lb (or 4 bone-in breasts)",
@@ -299,7 +299,7 @@
             {
               "n": "Sweet potatoes, large",
               "q": "2",
-              "m": "Tue D"
+              "m": "Mon D"
             },
             {
               "n": "Yellow onions, large",
@@ -309,47 +309,32 @@
             {
               "n": "Red onion",
               "q": "1",
-              "m": "Tue D"
+              "m": "Mon D"
             },
             {
               "n": "Garlic",
-              "q": "2 heads (~20 cloves)",
-              "m": "Mon, Wed, Thu, Fri, Sat D, Sun D"
+              "q": "2 heads (~17 cloves)",
+              "m": "Wed, Thu, Fri, Sat D, Sun D"
             },
             {
               "n": "Bell peppers",
-              "q": "4 (1 red, 1 green, 2 any color)",
-              "m": "Mon red, Thu green, Fri 2"
+              "q": "3 (1 green, 2 any color)",
+              "m": "Thu green, Fri 2"
             },
             {
               "n": "Carrots",
-              "q": "6 (1-lb bag)",
-              "m": "Mon 2, Sat 4"
-            },
-            {
-              "n": "Broccoli",
-              "q": "1 small crown (1 cup florets)",
-              "m": "Mon"
-            },
-            {
-              "n": "Snap peas or snow peas",
-              "q": "8 oz (1 cup)",
-              "m": "Mon"
-            },
-            {
-              "n": "Fresh ginger",
-              "q": "1 small knob",
-              "m": "Mon"
+              "q": "4 (1-lb bag)",
+              "m": "Sat D"
             },
             {
               "n": "Green onions",
               "q": "1 bunch",
-              "m": "Mon, Sun D, Thu topping"
+              "m": "Sun D, Thu topping"
             },
             {
               "n": "Brussels sprouts",
               "q": "1 lb",
-              "m": "Tue D"
+              "m": "Mon D"
             },
             {
               "n": "Fresh green beans",
@@ -469,11 +454,6 @@
           "name": "Pantry/Canned/Dry",
           "items": [
             {
-              "n": "White or brown rice",
-              "q": "2 lb bag",
-              "m": "Mon D"
-            },
-            {
               "n": "Crushed tomatoes",
               "q": "1 can (28 oz)",
               "m": "Thu chili"
@@ -511,17 +491,12 @@
             {
               "n": "Olive oil",
               "q": "about ¾ cup (1 bottle)",
-              "m": "Tue, Wed, Fri, Sat D"
-            },
-            {
-              "n": "Vegetable or canola oil",
-              "q": "2 Tbsp",
-              "m": "Mon D"
+              "m": "Mon, Wed, Fri, Sat D"
             },
             {
               "n": "Cornstarch",
-              "q": "3 Tbsp",
-              "m": "Mon, Sat gravy"
+              "q": "2 Tbsp",
+              "m": "Sat gravy"
             },
             {
               "n": "Pancake basics: flour, sugar, baking powder, baking soda (or buttermilk pancake mix)",
@@ -541,16 +516,6 @@
           "name": "Spices & Sauces",
           "items": [
             {
-              "n": "Soy sauce",
-              "q": "3 Tbsp",
-              "m": "Mon D"
-            },
-            {
-              "n": "Sesame oil (optional)",
-              "q": "1 Tbsp",
-              "m": "Mon D"
-            },
-            {
               "n": "Chili powder",
               "q": "2 Tbsp + 1 tsp",
               "m": "Thu, Fri"
@@ -563,17 +528,17 @@
             {
               "n": "Smoked paprika",
               "q": "about 2 tsp",
-              "m": "Tue, Thu, Fri"
+              "m": "Mon, Thu, Fri"
             },
             {
               "n": "Dried rosemary",
               "q": "2 tsp",
-              "m": "Tue, Sat D"
+              "m": "Mon, Sat D"
             },
             {
               "n": "Dried thyme",
               "q": "1–2 tsp",
-              "m": "Tue, Sat D"
+              "m": "Mon, Sat D"
             },
             {
               "n": "Dried oregano",
@@ -583,7 +548,7 @@
             {
               "n": "Garlic powder",
               "q": "1 tsp (have from weekend)",
-              "m": "Tue"
+              "m": "Mon"
             },
             {
               "n": "Worcestershire sauce",
