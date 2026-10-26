@@ -1,639 +1,763 @@
 {
- "store": {
-  "name": "Schnucks Ballwin",
-  "address": "15425 Manchester Rd, Ballwin, MO 63011",
-  "storeId": "106",
-  "phone": "636-256-0644"
- },
- "source": "Aisle locations from schnucks.com product search with store 106 (Ballwin, 15425 Manchester) selected, looked up 2026-10-18. Department order = the store's own location display order on schnucks.com.",
- "departments": [
-  {
-   "key": "produce",
-   "short": "Produce",
-   "header": "Produce (incl. potato & onion bins)",
-   "order": 1
+  "store": {
+    "name": "Schnucks Ballwin",
+    "address": "15425 Manchester Rd, Ballwin, MO 63011",
+    "storeId": "106",
+    "phone": "636-256-0644"
   },
-  {
-   "key": "bakery",
-   "short": "Bakery",
-   "header": "Bakery",
-   "order": 2
+  "source": "Aisle locations from schnucks.com product search with store 106 (Ballwin, 15425 Manchester) selected, looked up 2026-10-18. Department order = the store's own location display order on schnucks.com.",
+  "departments": [
+    {
+      "key": "produce",
+      "short": "Produce",
+      "header": "Produce (incl. potato & onion bins)",
+      "order": 1
+    },
+    {
+      "key": "bakery",
+      "short": "Bakery",
+      "header": "Bakery",
+      "order": 2
+    },
+    {
+      "key": "deli",
+      "short": "Deli",
+      "header": "Deli",
+      "order": 3
+    },
+    {
+      "key": "meat",
+      "short": "Meat & Seafood",
+      "header": "Meat & Seafood (back wall)",
+      "order": 5
+    },
+    {
+      "key": "aisle2",
+      "short": "Aisle 2",
+      "header": "Aisle 2 – Bread & Rolls",
+      "order": 7
+    },
+    {
+      "key": "aisle3",
+      "short": "Aisle 3",
+      "header": "Aisle 3 – Pasta, Tortillas, Salsa, Asian & Condiments",
+      "order": 8
+    },
+    {
+      "key": "aisle4",
+      "short": "Aisle 4",
+      "header": "Aisle 4 – Canned Tomatoes & Beans, Broth, Rice, Bread Crumbs",
+      "order": 9
+    },
+    {
+      "key": "aisle5",
+      "short": "Aisle 5",
+      "header": "Aisle 5 – Pancake Mix & Syrup",
+      "order": 10
+    },
+    {
+      "key": "aisle6",
+      "short": "Aisle 6",
+      "header": "Aisle 6 – Baking, Oils & Spices",
+      "order": 11
+    },
+    {
+      "key": "aisle10",
+      "short": "Aisle 10",
+      "header": "Aisle 10 – Frozen",
+      "order": 15
+    },
+    {
+      "key": "aisle11",
+      "short": "Aisle 11",
+      "header": "Aisle 11 – Chips & Snacks",
+      "order": 16
+    },
+    {
+      "key": "dairy",
+      "short": "Dairy",
+      "header": "Dairy & Eggs",
+      "order": 22
+    },
+    {
+      "key": "other",
+      "short": "Other",
+      "header": "Other / not yet located",
+      "order": 999
+    }
+  ],
+  "items": {
+    "apples": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "avocados": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "bacon": {
+      "dept": "meat",
+      "loc": "Meat 2 · Sec B2"
+    },
+    "bananas or other fresh fruit": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "beef broth": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec D3"
+    },
+    "beef chuck roast": {
+      "dept": "meat",
+      "loc": "Meat case"
+    },
+    "bell peppers": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "black beans": {
+      "dept": "aisle5",
+      "loc": "Aisle 5 · middle end cap"
+    },
+    "broccoli": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "brown sugar": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec C10"
+    },
+    "brussels sprouts": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "butter": {
+      "dept": "dairy",
+      "loc": "Dairy"
+    },
+    "buttermilk": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 43"
+    },
+    "carrots": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "celery": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "chicken broth": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec D3"
+    },
+    "chili powder": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "cornbread mix": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec C9"
+    },
+    "cornstarch": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec C9"
+    },
+    "crushed tomatoes": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec A8"
+    },
+    "crusty bread": {
+      "dept": "bakery",
+      "loc": "Bakery"
+    },
+    "deli roast beef, sliced": {
+      "dept": "deli",
+      "loc": "Deli"
+    },
+    "dried oregano": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "dried rosemary": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "dried thyme": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "dry bread crumbs": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec A3/A4"
+    },
+    "eggs": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 26"
+    },
+    "flank steak (or sirloin/skirt)": {
+      "dept": "meat",
+      "loc": "Meat case"
+    },
+    "flour tortillas (fajita/soft taco size)": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec A1"
+    },
+    "fresh berries": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "fresh berries (strawberries/blueberries)": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "fresh ginger": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "fresh green beans": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "fresh rosemary & thyme (or use dried)": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "frozen shredded hash browns": {
+      "dept": "aisle10",
+      "loc": "Aisle 10 · Sec D4"
+    },
+    "garlic": {
+      "dept": "produce",
+      "loc": "Produce · onion/garlic end cap"
+    },
+    "garlic powder": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "green onions": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "ground beef (80/20 or 85/15)": {
+      "dept": "meat",
+      "loc": "Meat case"
+    },
+    "ground cinnamon": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "ground cumin": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "ketchup": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec C2"
+    },
+    "kidney beans": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec A11"
+    },
+    "kosher salt & black pepper": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D10–D12"
+    },
+    "large flour tortillas (burrito size)": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec A1"
+    },
+    "lemon": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "lettuce (romaine or leaf)": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "limes": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "maple syrup": {
+      "dept": "aisle5",
+      "loc": "Aisle 5 · Sec A10"
+    },
+    "mayonnaise": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec D1"
+    },
+    "milk": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 41–46"
+    },
+    "milk or half-and-half": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 41–46"
+    },
+    "olive oil": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D6"
+    },
+    "pancake basics: flour, sugar, baking powder, baking soda (or buttermilk pancake mix)": {
+      "dept": "aisle5",
+      "loc": "Aisle 5 · Sec A12 (flour etc. Aisle 6 · C9)"
+    },
+    "potato chips": {
+      "dept": "aisle11",
+      "loc": "Aisle 11 · Sec C8–C11"
+    },
+    "potatoes (yukon gold or russet)": {
+      "dept": "produce",
+      "loc": "Produce · potato bin"
+    },
+    "potatoes (yukon gold/russet; baby ok for sat)": {
+      "dept": "produce",
+      "loc": "Produce · potato bin"
+    },
+    "prepared horseradish": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec C7"
+    },
+    "red onion": {
+      "dept": "produce",
+      "loc": "Produce · onion/garlic end cap"
+    },
+    "ribeye steaks (10–12 oz, 1–1¼\" thick)": {
+      "dept": "meat",
+      "loc": "Meat case"
+    },
+    "rotisserie chicken (or 1½ lb cooked chicken)": {
+      "dept": "deli",
+      "loc": "Deli"
+    },
+    "salad dressing": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec C7/D7"
+    },
+    "salad greens": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "salsa": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec A5"
+    },
+    "salt & black pepper": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D10–D12"
+    },
+    "sandwich bread (for toast)": {
+      "dept": "aisle2",
+      "loc": "Aisle 2 · Sec A5"
+    },
+    "sandwich bread or croissants": {
+      "dept": "bakery",
+      "loc": "Bakery"
+    },
+    "sandwich rolls": {
+      "dept": "aisle2",
+      "loc": "Aisle 2 · Sec B12"
+    },
+    "sesame oil (optional)": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec A7"
+    },
+    "shredded mexican-blend cheese": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 3–4"
+    },
+    "shredded cheddar": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 3–4"
+    },
+    "smoked paprika": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "snap peas or snow peas": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "sour cream": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 55"
+    },
+    "soy sauce": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec A7"
+    },
+    "sweet potatoes, large": {
+      "dept": "produce",
+      "loc": "Produce · potato bin"
+    },
+    "thick bread for french toast (texas toast/brioche)": {
+      "dept": "aisle2",
+      "loc": "Aisle 2 · Sec A7"
+    },
+    "tomato paste": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec A6/A8"
+    },
+    "vanilla extract": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "vegetable or canola oil": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D8"
+    },
+    "white or brown rice": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec C4"
+    },
+    "whole chicken 4–4½ lb (or 4 bone-in breasts)": {
+      "dept": "meat",
+      "loc": "Meat case"
+    },
+    "worcestershire sauce": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec C4"
+    },
+    "yellow mustard": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec C1"
+    },
+    "yellow onions": {
+      "dept": "produce",
+      "loc": "Produce · onion/garlic end cap"
+    },
+    "yellow onions, large": {
+      "dept": "produce",
+      "loc": "Produce · onion/garlic end cap"
+    },
+    "boneless skinless chicken breasts": {
+      "dept": "meat",
+      "loc": "Meat 1 · Sec 11"
+    },
+    "pork chops (about 5 oz each)": {
+      "dept": "meat",
+      "loc": "Meat 1 · Sec 6–7"
+    },
+    "boneless pork shoulder (boston butt) roast": {
+      "dept": "meat",
+      "loc": "Meat 1 · Sec 9"
+    },
+    "fresh basil": {
+      "dept": "produce",
+      "loc": "Produce · herbs"
+    },
+    "salad mix (bag)": {
+      "dept": "produce",
+      "loc": "Produce · bagged salads"
+    },
+    "baby carrots": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "coleslaw mix (bag)": {
+      "dept": "produce",
+      "loc": "Produce · bagged salads"
+    },
+    "green bell peppers": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "hamburger buns": {
+      "dept": "aisle2",
+      "loc": "Aisle 2 · Sec B10"
+    },
+    "honey": {
+      "dept": "aisle2",
+      "loc": "Aisle 2 · Sec B3"
+    },
+    "spaghetti": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec B1"
+    },
+    "egg noodles": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec B1"
+    },
+    "barbecue sauce": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec C3"
+    },
+    "coleslaw dressing": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec D5"
+    },
+    "rice vinegar": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec A7"
+    },
+    "apple cider vinegar": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec D8"
+    },
+    "panko bread crumbs": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec A3"
+    },
+    "diced tomatoes": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec A8"
+    },
+    "tomato sauce": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec A8"
+    },
+    "condensed cream of mushroom soup": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec D5–D7"
+    },
+    "long-grain white rice": {
+      "dept": "aisle4",
+      "loc": "Aisle 4 · Sec C4"
+    },
+    "all-purpose flour": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec C9"
+    },
+    "vegetable oil": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D7"
+    },
+    "dried basil": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9"
+    },
+    "celery seed": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9"
+    },
+    "frozen green peas": {
+      "dept": "aisle10",
+      "loc": "Aisle 10 · Sec D16"
+    },
+    "frozen garlic bread": {
+      "dept": "aisle10",
+      "loc": "Aisle 10 · Sec C17"
+    },
+    "fresh mozzarella": {
+      "dept": "deli",
+      "loc": "Deli"
+    },
+    "grated parmesan": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 14"
+    },
+    "sliced provolone": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 8"
+    },
+    "refrigerated pie crusts (2-pack)": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 17"
+    }
   },
-  {
-   "key": "deli",
-   "short": "Deli",
-   "header": "Deli",
-   "order": 3
-  },
-  {
-   "key": "meat",
-   "short": "Meat & Seafood",
-   "header": "Meat & Seafood (back wall)",
-   "order": 5
-  },
-  {
-   "key": "aisle2",
-   "short": "Aisle 2",
-   "header": "Aisle 2 – Bread & Rolls",
-   "order": 7
-  },
-  {
-   "key": "aisle3",
-   "short": "Aisle 3",
-   "header": "Aisle 3 – Tortillas, Salsa, Asian & Condiments",
-   "order": 8
-  },
-  {
-   "key": "aisle4",
-   "short": "Aisle 4",
-   "header": "Aisle 4 – Canned Tomatoes & Beans, Broth, Rice, Bread Crumbs",
-   "order": 9
-  },
-  {
-   "key": "aisle5",
-   "short": "Aisle 5",
-   "header": "Aisle 5 – Pancake Mix & Syrup",
-   "order": 10
-  },
-  {
-   "key": "aisle6",
-   "short": "Aisle 6",
-   "header": "Aisle 6 – Baking, Oils & Spices",
-   "order": 11
-  },
-  {
-   "key": "aisle10",
-   "short": "Aisle 10",
-   "header": "Aisle 10 – Frozen",
-   "order": 15
-  },
-  {
-   "key": "aisle11",
-   "short": "Aisle 11",
-   "header": "Aisle 11 – Chips & Snacks",
-   "order": 16
-  },
-  {
-   "key": "dairy",
-   "short": "Dairy",
-   "header": "Dairy & Eggs",
-   "order": 22
-  },
-  {
-   "key": "other",
-   "short": "Other",
-   "header": "Other / not yet located",
-   "order": 999
+  "keywords": [
+    [
+      "tortilla",
+      "aisle3"
+    ],
+    [
+      "salsa",
+      "aisle3"
+    ],
+    [
+      "soy",
+      "aisle3"
+    ],
+    [
+      "mustard",
+      "aisle3"
+    ],
+    [
+      "ketchup",
+      "aisle3"
+    ],
+    [
+      "mayo",
+      "aisle3"
+    ],
+    [
+      "dressing",
+      "aisle3"
+    ],
+    [
+      "worcestershire",
+      "aisle3"
+    ],
+    [
+      "horseradish",
+      "aisle3"
+    ],
+    [
+      "bbq",
+      "aisle3"
+    ],
+    [
+      "hot sauce",
+      "aisle3"
+    ],
+    [
+      "crushed tomato",
+      "aisle4"
+    ],
+    [
+      "diced tomato",
+      "aisle4"
+    ],
+    [
+      "tomato paste",
+      "aisle4"
+    ],
+    [
+      "tomato sauce",
+      "aisle4"
+    ],
+    [
+      "beans",
+      "aisle4"
+    ],
+    [
+      "broth",
+      "aisle4"
+    ],
+    [
+      "stock",
+      "aisle4"
+    ],
+    [
+      "rice",
+      "aisle4"
+    ],
+    [
+      "bread crumb",
+      "aisle4"
+    ],
+    [
+      "panko",
+      "aisle4"
+    ],
+    [
+      "soup",
+      "aisle4"
+    ],
+    [
+      "syrup",
+      "aisle5"
+    ],
+    [
+      "pancake",
+      "aisle5"
+    ],
+    [
+      "cereal",
+      "aisle5"
+    ],
+    [
+      "oat",
+      "aisle5"
+    ],
+    [
+      "flour",
+      "aisle6"
+    ],
+    [
+      "sugar",
+      "aisle6"
+    ],
+    [
+      "baking",
+      "aisle6"
+    ],
+    [
+      "cornstarch",
+      "aisle6"
+    ],
+    [
+      "cornbread",
+      "aisle6"
+    ],
+    [
+      "vanilla",
+      "aisle6"
+    ],
+    [
+      "oil",
+      "aisle6"
+    ],
+    [
+      "vinegar",
+      "aisle6"
+    ],
+    [
+      "salt",
+      "aisle6"
+    ],
+    [
+      "pepper,",
+      "aisle6"
+    ],
+    [
+      "powder",
+      "aisle6"
+    ],
+    [
+      "dried",
+      "aisle6"
+    ],
+    [
+      "ground ",
+      "aisle6"
+    ],
+    [
+      "paprika",
+      "aisle6"
+    ],
+    [
+      "frozen",
+      "aisle10"
+    ],
+    [
+      "chips",
+      "aisle11"
+    ],
+    [
+      "crackers",
+      "aisle11"
+    ],
+    [
+      "rotisserie",
+      "deli"
+    ],
+    [
+      "deli",
+      "deli"
+    ],
+    [
+      "sandwich bread",
+      "aisle2"
+    ],
+    [
+      "rolls",
+      "aisle2"
+    ],
+    [
+      "buns",
+      "aisle2"
+    ]
+  ],
+  "category_fallback": {
+    "Meat": "meat",
+    "Produce": "produce",
+    "Dairy & Eggs": "dairy",
+    "Bakery/Bread": "bakery",
+    "Pantry/Canned/Dry": "other",
+    "Spices & Sauces": "aisle6",
+    "Frozen": "aisle10",
+    "Other": "other"
   }
- ],
- "items": {
-  "apples": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "avocados": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "bacon": {
-   "dept": "meat",
-   "loc": "Meat 2 · Sec B2"
-  },
-  "bananas or other fresh fruit": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "beef broth": {
-   "dept": "aisle4",
-   "loc": "Aisle 4 · Sec D3"
-  },
-  "beef chuck roast": {
-   "dept": "meat",
-   "loc": "Meat case"
-  },
-  "bell peppers": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "black beans": {
-   "dept": "aisle5",
-   "loc": "Aisle 5 · middle end cap"
-  },
-  "broccoli": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "brown sugar": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec C10"
-  },
-  "brussels sprouts": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "butter": {
-   "dept": "dairy",
-   "loc": "Dairy"
-  },
-  "buttermilk": {
-   "dept": "dairy",
-   "loc": "Dairy · Sec 43"
-  },
-  "carrots": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "celery": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "chicken broth": {
-   "dept": "aisle4",
-   "loc": "Aisle 4 · Sec D3"
-  },
-  "chili powder": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D9–D10"
-  },
-  "cornbread mix": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec C9"
-  },
-  "cornstarch": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec C9"
-  },
-  "crushed tomatoes": {
-   "dept": "aisle4",
-   "loc": "Aisle 4 · Sec A8"
-  },
-  "crusty bread": {
-   "dept": "bakery",
-   "loc": "Bakery"
-  },
-  "deli roast beef, sliced": {
-   "dept": "deli",
-   "loc": "Deli"
-  },
-  "dried oregano": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D9–D10"
-  },
-  "dried rosemary": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D9–D10"
-  },
-  "dried thyme": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D9–D10"
-  },
-  "dry bread crumbs": {
-   "dept": "aisle4",
-   "loc": "Aisle 4 · Sec A3/A4"
-  },
-  "eggs": {
-   "dept": "dairy",
-   "loc": "Dairy · Sec 26"
-  },
-  "flank steak (or sirloin/skirt)": {
-   "dept": "meat",
-   "loc": "Meat case"
-  },
-  "flour tortillas (fajita/soft taco size)": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec A1"
-  },
-  "fresh berries": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "fresh berries (strawberries/blueberries)": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "fresh ginger": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "fresh green beans": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "fresh rosemary & thyme (or use dried)": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "frozen shredded hash browns": {
-   "dept": "aisle10",
-   "loc": "Aisle 10 · Sec D4"
-  },
-  "garlic": {
-   "dept": "produce",
-   "loc": "Produce · onion/garlic end cap"
-  },
-  "garlic powder": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D9–D10"
-  },
-  "green onions": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "ground beef (80/20 or 85/15)": {
-   "dept": "meat",
-   "loc": "Meat case"
-  },
-  "ground cinnamon": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D9–D10"
-  },
-  "ground cumin": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D9–D10"
-  },
-  "ketchup": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec C2"
-  },
-  "kidney beans": {
-   "dept": "aisle4",
-   "loc": "Aisle 4 · Sec A11"
-  },
-  "kosher salt & black pepper": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D10–D12"
-  },
-  "large flour tortillas (burrito size)": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec A1"
-  },
-  "lemon": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "lettuce (romaine or leaf)": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "limes": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "maple syrup": {
-   "dept": "aisle5",
-   "loc": "Aisle 5 · Sec A10"
-  },
-  "mayonnaise": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec D1"
-  },
-  "milk": {
-   "dept": "dairy",
-   "loc": "Dairy · Sec 41–46"
-  },
-  "milk or half-and-half": {
-   "dept": "dairy",
-   "loc": "Dairy · Sec 41–46"
-  },
-  "olive oil": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D6"
-  },
-  "pancake basics: flour, sugar, baking powder, baking soda (or buttermilk pancake mix)": {
-   "dept": "aisle5",
-   "loc": "Aisle 5 · Sec A12 (flour etc. Aisle 6 · C9)"
-  },
-  "potato chips": {
-   "dept": "aisle11",
-   "loc": "Aisle 11 · Sec C8–C11"
-  },
-  "potatoes (yukon gold or russet)": {
-   "dept": "produce",
-   "loc": "Produce · potato bin"
-  },
-  "potatoes (yukon gold/russet; baby ok for sat)": {
-   "dept": "produce",
-   "loc": "Produce · potato bin"
-  },
-  "prepared horseradish": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec C7"
-  },
-  "red onion": {
-   "dept": "produce",
-   "loc": "Produce · onion/garlic end cap"
-  },
-  "ribeye steaks (10–12 oz, 1–1¼\" thick)": {
-   "dept": "meat",
-   "loc": "Meat case"
-  },
-  "rotisserie chicken (or 1½ lb cooked chicken)": {
-   "dept": "deli",
-   "loc": "Deli"
-  },
-  "salad dressing": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec C7/D7"
-  },
-  "salad greens": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "salsa": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec A5"
-  },
-  "salt & black pepper": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D10–D12"
-  },
-  "sandwich bread (for toast)": {
-   "dept": "aisle2",
-   "loc": "Aisle 2 · Sec A5"
-  },
-  "sandwich bread or croissants": {
-   "dept": "bakery",
-   "loc": "Bakery"
-  },
-  "sandwich rolls": {
-   "dept": "aisle2",
-   "loc": "Aisle 2 · Sec B12"
-  },
-  "sesame oil (optional)": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec A7"
-  },
-  "shredded mexican-blend cheese": {
-   "dept": "dairy",
-   "loc": "Dairy · Sec 3–4"
-  },
-  "shredded cheddar": {
-   "dept": "dairy",
-   "loc": "Dairy · Sec 3–4"
-  },
-  "smoked paprika": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D9–D10"
-  },
-  "snap peas or snow peas": {
-   "dept": "produce",
-   "loc": "Produce"
-  },
-  "sour cream": {
-   "dept": "dairy",
-   "loc": "Dairy · Sec 55"
-  },
-  "soy sauce": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec A7"
-  },
-  "sweet potatoes, large": {
-   "dept": "produce",
-   "loc": "Produce · potato bin"
-  },
-  "thick bread for french toast (texas toast/brioche)": {
-   "dept": "aisle2",
-   "loc": "Aisle 2 · Sec A7"
-  },
-  "tomato paste": {
-   "dept": "aisle4",
-   "loc": "Aisle 4 · Sec A6/A8"
-  },
-  "vanilla extract": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D9–D10"
-  },
-  "vegetable or canola oil": {
-   "dept": "aisle6",
-   "loc": "Aisle 6 · Sec D8"
-  },
-  "white or brown rice": {
-   "dept": "aisle4",
-   "loc": "Aisle 4 · Sec C4"
-  },
-  "whole chicken 4–4½ lb (or 4 bone-in breasts)": {
-   "dept": "meat",
-   "loc": "Meat case"
-  },
-  "worcestershire sauce": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec C4"
-  },
-  "yellow mustard": {
-   "dept": "aisle3",
-   "loc": "Aisle 3 · Sec C1"
-  },
-  "yellow onions": {
-   "dept": "produce",
-   "loc": "Produce · onion/garlic end cap"
-  },
-  "yellow onions, large": {
-   "dept": "produce",
-   "loc": "Produce · onion/garlic end cap"
-  }
- },
- "keywords": [
-  [
-   "tortilla",
-   "aisle3"
-  ],
-  [
-   "salsa",
-   "aisle3"
-  ],
-  [
-   "soy",
-   "aisle3"
-  ],
-  [
-   "mustard",
-   "aisle3"
-  ],
-  [
-   "ketchup",
-   "aisle3"
-  ],
-  [
-   "mayo",
-   "aisle3"
-  ],
-  [
-   "dressing",
-   "aisle3"
-  ],
-  [
-   "worcestershire",
-   "aisle3"
-  ],
-  [
-   "horseradish",
-   "aisle3"
-  ],
-  [
-   "bbq",
-   "aisle3"
-  ],
-  [
-   "hot sauce",
-   "aisle3"
-  ],
-  [
-   "crushed tomato",
-   "aisle4"
-  ],
-  [
-   "diced tomato",
-   "aisle4"
-  ],
-  [
-   "tomato paste",
-   "aisle4"
-  ],
-  [
-   "tomato sauce",
-   "aisle4"
-  ],
-  [
-   "beans",
-   "aisle4"
-  ],
-  [
-   "broth",
-   "aisle4"
-  ],
-  [
-   "stock",
-   "aisle4"
-  ],
-  [
-   "rice",
-   "aisle4"
-  ],
-  [
-   "bread crumb",
-   "aisle4"
-  ],
-  [
-   "panko",
-   "aisle4"
-  ],
-  [
-   "soup",
-   "aisle4"
-  ],
-  [
-   "syrup",
-   "aisle5"
-  ],
-  [
-   "pancake",
-   "aisle5"
-  ],
-  [
-   "cereal",
-   "aisle5"
-  ],
-  [
-   "oat",
-   "aisle5"
-  ],
-  [
-   "flour",
-   "aisle6"
-  ],
-  [
-   "sugar",
-   "aisle6"
-  ],
-  [
-   "baking",
-   "aisle6"
-  ],
-  [
-   "cornstarch",
-   "aisle6"
-  ],
-  [
-   "cornbread",
-   "aisle6"
-  ],
-  [
-   "vanilla",
-   "aisle6"
-  ],
-  [
-   "oil",
-   "aisle6"
-  ],
-  [
-   "vinegar",
-   "aisle6"
-  ],
-  [
-   "salt",
-   "aisle6"
-  ],
-  [
-   "pepper,",
-   "aisle6"
-  ],
-  [
-   "powder",
-   "aisle6"
-  ],
-  [
-   "dried",
-   "aisle6"
-  ],
-  [
-   "ground ",
-   "aisle6"
-  ],
-  [
-   "paprika",
-   "aisle6"
-  ],
-  [
-   "frozen",
-   "aisle10"
-  ],
-  [
-   "chips",
-   "aisle11"
-  ],
-  [
-   "crackers",
-   "aisle11"
-  ],
-  [
-   "rotisserie",
-   "deli"
-  ],
-  [
-   "deli",
-   "deli"
-  ],
-  [
-   "sandwich bread",
-   "aisle2"
-  ],
-  [
-   "rolls",
-   "aisle2"
-  ],
-  [
-   "buns",
-   "aisle2"
-  ]
- ],
- "category_fallback": {
-  "Meat": "meat",
-  "Produce": "produce",
-  "Dairy & Eggs": "dairy",
-  "Bakery/Bread": "bakery",
-  "Pantry/Canned/Dry": "other",
-  "Spices & Sauces": "aisle6",
-  "Frozen": "aisle10",
-  "Other": "other"
- }
 }

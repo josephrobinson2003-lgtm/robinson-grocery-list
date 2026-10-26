@@ -1,6 +1,6 @@
 // Robinson Grocery List service worker.
 // VERSION is stamped by build.py on every rebuild so phones pick up the new worker.
-const VERSION = '2026-10-17-4268267a';
+const VERSION = '2026-10-26-4d9f97be';
 const CACHE = 'rgl-' + VERSION;
 const SHELL = [
   './',

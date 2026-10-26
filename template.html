@@ -80,7 +80,7 @@
   try { Object.keys(localStorage).forEach(function(k){ if(k.indexOf('robinson-grocery:')===0 && k!==KEY) localStorage.removeItem(k); }); } catch(e){}
   var state = {}; try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){}
   var ui = {}; try { ui = JSON.parse(localStorage.getItem(UIKEY)) || {}; } catch(e){}
-  if (!ui.tab) ui.tab = 'all';
+  if (!ui.tab || (ui.tab!=='all' && !data.sections.some(function(s){ return s.id===ui.tab; }))) ui.tab = 'all';
   function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); localStorage.setItem(UIKEY, JSON.stringify(ui)); } catch(e){} }
   function slug(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
   function el(t,c,txt){ var e=document.createElement(t); if(c) e.className=c; if(txt!=null) e.textContent=txt; return e; }
