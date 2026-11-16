@@ -554,6 +554,66 @@
     "refrigerated pie crusts (2-pack)": {
       "dept": "dairy",
       "loc": "Dairy · Sec 17"
+    },
+    "bone-in, skin-on chicken thighs": {
+      "dept": "meat",
+      "loc": "Meat 1 · Sec 12"
+    },
+    "pork tenderloin": {
+      "dept": "meat",
+      "loc": "Meat 1 · Sec 7"
+    },
+    "sweet italian sausage links": {
+      "dept": "meat",
+      "loc": "Meat 1 · Sec 7"
+    },
+    "hoagie rolls": {
+      "dept": "bakery",
+      "loc": "Bakery"
+    },
+    "ziti pasta (or penne/mostaccioli)": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec B1"
+    },
+    "spaghetti sauce (or marinara)": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec B8"
+    },
+    "taco shells": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec A2"
+    },
+    "taco seasoning": {
+      "dept": "aisle3",
+      "loc": "Aisle 3 · Sec A3"
+    },
+    "baking mix (bisquick)": {
+      "dept": "aisle5",
+      "loc": "Aisle 5 · Sec A11"
+    },
+    "bay leaves": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D9–D10"
+    },
+    "cayenne pepper": {
+      "dept": "aisle6",
+      "loc": "Aisle 6 · Sec D10"
+    },
+    "shredded mozzarella": {
+      "dept": "dairy",
+      "loc": "Dairy · Sec 3"
+    },
+    "lemons": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "tomatoes": {
+      "dept": "produce",
+      "loc": "Produce"
+    },
+    "red and green bell peppers": {
+      "dept": "produce",
+      "loc": "Produce"
     }
   },
   "keywords": [
@@ -748,6 +808,58 @@
     [
       "buns",
       "aisle2"
+    ],
+    [
+      "ziti",
+      "aisle3"
+    ],
+    [
+      "penne",
+      "aisle3"
+    ],
+    [
+      "mostaccioli",
+      "aisle3"
+    ],
+    [
+      "spaghetti sauce",
+      "aisle3"
+    ],
+    [
+      "pasta sauce",
+      "aisle3"
+    ],
+    [
+      "marinara",
+      "aisle3"
+    ],
+    [
+      "taco shell",
+      "aisle3"
+    ],
+    [
+      "taco seasoning",
+      "aisle3"
+    ],
+    [
+      "bisquick",
+      "aisle5"
+    ],
+    [
+      "baking mix",
+      "aisle5"
+    ],
+    [
+      "bay leaf",
+      "aisle6"
+    ],
+    [
+      "cayenne",
+      "aisle6"
+    ],
+    [
+      "hoagie",
+      "bakery"
     ]
   ],
   "category_fallback": {
